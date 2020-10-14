@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Funning A-Frame</title>
+	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-entity id="camera" camera look-controls position="0 1.6 0"></a-entity>
+
+		<!-- Source -->
+		<a-assets>
+			<!-- 하늘 텍스쳐 -->
+			<img src="./images/sky.gif.png" alt="sky" id="assets__sky">
+			<!-- /하늘 텍스쳐 -->
+			<!-- 바닥 텍스쳐 -->
+			<img src="./images/grass.gif" alt="grass" id="assets__grass">
+			<!-- /바닥 텍스쳐 -->
+		</a-assets>
+		<!-- /Source -->
+
+		<!-- 하늘 -->
+		<a-sky src="#assets__sky"></a-sky>
+		<!-- /하늘 -->
+	
+		<!-- 바닥 -->
+		<a-plane src="#assets__grass" repeat="50 50" height="100" width="100" rotation="-90 0 0" position="0 0 0"></a-plane>
+		<!-- /바닥 -->
+	</a-scene>
+	<script type="module" src="./js/script.js"></script>
+</body>
+</html>
